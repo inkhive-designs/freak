@@ -24,7 +24,7 @@ $wp_customize->add_section('freak_mobile_header_image', array(
 ) );
 
 $wp_customize->add_setting('freak_mobile_header_image_upload', array(
-    'default' => '',
+    'sanitize_callback' => 'ecs_url_raw',
 ) );
 
 $wp_customize->add_control(
@@ -33,7 +33,7 @@ $wp_customize->add_control(
          'freak_mobile_header_image_upload',
          array(
             'label'      => __('Upload An Image', 'freak'),
-            'description' => __('Upload a header image to show in mobile site. Image should be tall enough.'),
+            'description' => __('Upload a header image to show in mobile site. Image should be tall enough.', 'freak'),
             'section'    => 'freak_mobile_header_image',
             'settings'   => 'freak_mobile_header_image_upload',
          )
