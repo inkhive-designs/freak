@@ -1,3 +1,4 @@
+<div class="social-icons col-md-12">
 <?php
 /*
 ** Template to Render Social Icons on Top Bar
@@ -10,3 +11,4 @@ for ($i = 1; $i < 8; $i++) :
 	<?php endif;
 
 endfor; ?>
+</div>

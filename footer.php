@@ -9,9 +9,8 @@
 ?>
 
 	</div><!-- #content -->
-
 	<?php get_sidebar('footer'); ?>
-
+<?php get_template_part('subscription'); ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info container">
 			<?php printf( __( 'Designed By %1$s.', 'freak' ), '<a href="'.esc_url("https://inkhive.com/").'" rel="nofollow">InkHive</a>' ); ?>

@@ -88,4 +88,18 @@ jQuery('.mobile-toggle-button').toggle(function(){
 document.querySelector('.mobile-toggle-button').addEventListener('click', function() {
 	slideout.toggle();
 }); 
-*/    
+*/
+
+jQuery(function() {
+    jQuery('#demo').on('click', function( e ) {
+        Custombox.open({
+            target: '#modal',
+            effect: 'fadein',
+            animation: top,
+            speed: 500,
+            loading: 2000,
+            position: ['center', 'center']
+        });
+        e.preventDefault();
+    });
+});
