@@ -70,6 +70,11 @@ function freak_custom_css_mods() {
 		echo "#masthead #site-logo img { transform: scale(".$val."); -webkit-transform: scale(".$val."); -moz-transform: scale(".$val."); -ms-transform: scale(".$val."); }";
 		endif;
 
+	if ( get_theme_mod('freak_mobile_header_image_upload')):
+        echo "@media screen and (max-width: 767px) {#masthead {
+                        background-image:url(" .esc_html( get_theme_mod('freak_mobile_header_image_upload') ). ")!important;}}";
+    endif;
+
 	echo "</style>";
 }
 

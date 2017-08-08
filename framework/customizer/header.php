@@ -16,6 +16,29 @@ $wp_customize->add_section( 'header_image' , array(
     'priority'   => 30,
 ) );
 
+//Mobile Header Image
+$wp_customize->add_section('freak_mobile_header_image', array(
+    'title' => __('Mobile Header Image', 'freak'),
+    'panel' => 'freak_header_panel',
+    'priority' => 30,
+) );
+
+$wp_customize->add_setting('freak_mobile_header_image_upload', array(
+    'default' => '',
+) );
+
+$wp_customize->add_control(
+    new WP_Customize_Image_Control(
+        $wp_customize,
+         'freak_mobile_header_image_upload',
+         array(
+            'label'      => __('Upload An Image', 'freak'),
+            'description' => __('Upload a header image to show in mobile site. Image should be tall enough.'),
+            'section'    => 'freak_mobile_header_image',
+            'settings'   => 'freak_mobile_header_image_upload',
+         )
+    )
+);
 
 //Parallax Settings
 $wp_customize->add_section( 'freak_header_parallax' , array(

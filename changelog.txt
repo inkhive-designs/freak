@@ -1,5 +1,7 @@
 ChangeLog
 =========
+Version 1.0.7
+    i) Mobile Haeader Image Added
 
 Version 1.0.6
 
