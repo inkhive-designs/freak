@@ -32,6 +32,14 @@ function freak_custom_header_setup() {
 		'admin-head-callback'    => 'freak_admin_header_style',
 		'admin-preview-callback' => 'freak_admin_header_image',
 	) ) );
+    register_default_headers( array(
+            'default-image'    => array(
+                'url'            => '%s/assets/images/city.jpg',
+                'thumbnail_url'    => '%s/assets/images/city.jpg',
+                'description'    => __('Default Header Image', 'freak')
+            )
+        )
+    );
 }
 add_action( 'after_setup_theme', 'freak_custom_header_setup' );
 
