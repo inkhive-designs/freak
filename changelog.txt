@@ -1,5 +1,9 @@
 ChangeLog
 =========
+Version 1.0.8
+
+    i) Mobile Header Image Bug fixed and minor bug fixing.
+
 Version 1.0.7
     i) Mobile Haeader Image Added
 

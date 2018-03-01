@@ -44,9 +44,11 @@
       width: 100%;
       .transform(rotate(0deg));
       .transition(3s all ease);
-      &:hover {
-        .transition(3s all ease);
-        .transform(rotate(1deg));
+      @media screen and (min-width: 767px) {
+        &:hover {
+          .transition(3s all ease);
+          .transform(rotate(1deg));
+        }
       }
     }
   }
@@ -58,17 +60,21 @@
       a:before {
         content: none;
       }
-      a:hover {
-        color: @accent;
+      @media screen and (min-width: 767px) {
+        a:hover {
+          color: @accent;
+        }
       }
     }
     .postedon a {
       color: @content;
       text-decoration: none;
       font-size: 13px;
+      @media screen and (min-width: 767px){
       &:hover {
         text-decoration: underline;
       }
+    }
     }
     .fa-calendar, .fa-user {
       border: solid 1px @accent;

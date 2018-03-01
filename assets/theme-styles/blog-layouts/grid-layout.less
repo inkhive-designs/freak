@@ -33,15 +33,17 @@
     }
     img {
       .transition(0.4s all ease);
-      .transform( scale(1.01) );
+      .transform(scale(1.01));
       -webkit-transform-style: preserve-3d;
     }
-    &:hover {
-      img {
-        .transition(0.4s all ease);
-        .transform( scale(1.07) );
-        -webkit-filter: brightness(0.9);
-        filter: brightness(0.9);
+    @media screen and (min-width: 767px) {
+      &:hover {
+        img {
+          .transition(0.4s all ease);
+          .transform(scale(1.07));
+          -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+        }
       }
     }
   }

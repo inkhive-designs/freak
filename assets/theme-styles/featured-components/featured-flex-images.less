@@ -47,55 +47,57 @@
       background: fade(@accent,80%);
       .transition(0.4s all ease);
     }
-    &:hover {
-      &:after {
-        height: 5px;
-      }
-      img {
-        filter: brightness(0.5);
-        -webkit-filter: brightness(0.5);
-
-      }
-      .flex-caption {
-        padding-left: 20px;
-      }
-      .viewtext {
-        display: block;
-        color: #eee;
-        text-shadow: 0 0 2px #000;
-        background: fade(#000,70%);
-        padding: 10px;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: bold;
-        .transition(0.4s all ease-in);
+    @media screen and (min-width: 767px) {
+      &:hover {
         &:after {
-          content: "";
-          position: absolute;
-          display: block;
-          width: 0%;
-          height: 4px;
-          bottom: 0px;
-          left: 0px;
-          background: fade(@accent,80%);
-          .transition(0.2s all ease);
+          height: 5px;
         }
-        &:before {
-          content: "";
-          position: absolute;
-          display: block;
-          width: 0%;
-          height: 4px;
-          top: 0px;
-          right: 0px;
-          background: fade(@accent,80%);
-          .transition(0.2s all ease);
+        img {
+          filter: brightness(0.5);
+          -webkit-filter: brightness(0.5);
+
         }
-        &:hover {
+        .flex-caption {
+          padding-left: 20px;
+        }
+        .viewtext {
+          display: block;
+          color: #eee;
+          text-shadow: 0 0 2px #000;
+          background: fade(#000, 70%);
+          padding: 10px;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: bold;
+          .transition(0.4s all ease-in);
+          &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 0%;
+            height: 4px;
+            bottom: 0px;
+            left: 0px;
+            background: fade(@accent, 80%);
+            .transition(0.2s all ease);
+          }
+          &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 0%;
+            height: 4px;
+            top: 0px;
+            right: 0px;
+            background: fade(@accent, 80%);
+            .transition(0.2s all ease);
+          }
+          &:hover {
 
-          &:before, &:after {
-            width: 100%;
+            &:before, &:after {
+              width: 100%;
 
+            }
           }
         }
       }
