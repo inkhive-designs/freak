@@ -14,7 +14,7 @@
 <?php get_template_part('modules/header/mobile'); ?>
 
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'freak' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'freak' ); ?></a>
 
 <?php get_template_part('modules/header/jumbosearch'); ?>
 

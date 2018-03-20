@@ -1,5 +1,13 @@
 ChangeLog
 =========
+Version: 1.0.9
+
+    i) Custom logo added.
+    ii) Freak layout bug fixed.
+    iii) FontAwesome minor bug fixed.
+    iv) Make SEO friendly.
+    v) Other minor bug fixed.
+
 Version 1.0.8
 
     i) Mobile Header Image Bug fixed and minor bug fixing.

@@ -5,7 +5,7 @@ $wp_customize->add_section(
     'freak_sec_upgrade',
     array(
         'title'     => __('Discover freak Pro','freak'),
-        'priority'  => 35,
+        'priority'  => 1,
     )
 );
 

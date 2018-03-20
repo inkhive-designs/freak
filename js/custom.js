@@ -70,7 +70,7 @@ var slideout = new Slideout({
     'menu': document.getElementById('mobile-static-menu'),
     'padding': 256,
     'tolerance': 70
-});     
+});
 
 jQuery('.mobile-toggle-button').toggle(function(){
 		slideout.open();
@@ -82,12 +82,12 @@ jQuery('.mobile-toggle-button').toggle(function(){
 		jQuery('.mobile-toggle-button').animate({left: 5},300, 'swing');
 		jQuery('.mobile-toggle-button i').removeClass('fa-close').addClass('fa-bars');
 	});
-	
+
 // Toggle button
 /*
 document.querySelector('.mobile-toggle-button').addEventListener('click', function() {
 	slideout.toggle();
-}); 
+});
 */
 
 jQuery(function() {

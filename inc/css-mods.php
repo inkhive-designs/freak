@@ -35,11 +35,11 @@ function freak_custom_css_mods() {
 	endif;
 	
 	if ( get_theme_mod('freak_title_font') ) :
-		echo ".title-font, h1, h2, .section-title, #top-menu ul li a, #static-bar ul li a { font-family: ".get_theme_mod('freak_title_font')."; }";
+		echo ".title-font, h1, h2, .section-title, #top-menu ul li a, #static-bar ul li a { font-family: ".esc_html(get_theme_mod('freak_title_font','Bitter'))."; }";
 	endif;
 	
 	if ( get_theme_mod('freak_body_font') ) :
-		echo "body { font-family: ".esc_html( get_theme_mod('freak_body_font') )."; }";
+		echo "body { font-family: ".esc_html( get_theme_mod('freak_body_font','Roboto Slab') )."; }";
 	endif;
 	
 	if ( get_theme_mod('freak_site_titlecolor') ) :

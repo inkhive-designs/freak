@@ -3,7 +3,7 @@
 function freak_customize_register_header( $wp_customize ) {
 
 $wp_customize->add_panel( 'freak_header_panel', array(
-    'priority'       => 35,
+    'priority'       => 2,
     'capability'     => 'edit_theme_options',
     'theme_supports' => '',
     'title'          => 'Header Settings',

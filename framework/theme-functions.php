@@ -192,9 +192,9 @@ add_action('freak_blog_layout', 'freak_get_blog_layout');
 function freak_header_image_class() {
 	$hclass = "";
 	if ( is_front_page() ) :
-		$val = get_theme_mod('freak_header_size', 3);
+		$val = esc_html(get_theme_mod('freak_header_size', 3));
 	else : //For All other Pages Except Front Page	
-		$val = get_theme_mod('freak_header_size_other', 3);
+		$val = esc_html(get_theme_mod('freak_header_size_other', 3));
 	endif;
 	
 	
@@ -218,7 +218,7 @@ add_action('freak_header_class', 'freak_header_image_class');
 
 function freak_add_parallax() {
 	if ( !get_theme_mod('freak_parallax_disable', false) ) :
-		$parallax_strength = get_theme_mod('freak_parallax_strength', 0.2);
+		$parallax_strength = esc_html(get_theme_mod('freak_parallax_strength', 0.2));
 		echo "data-stellar-background-ratio='".$parallax_strength."'";
 	endif;
 	

@@ -54,9 +54,9 @@ function freak_header_style() {
 	<style>
 	#masthead {
 			background-image: url(<?php header_image(); ?>);
-			background-size: <?php echo get_theme_mod('freak_himg_style','cover'); ?>;
-			background-position-x: <?php echo get_theme_mod('freak_himg_align','center'); ?>;
-			background-repeat: <?php echo  get_theme_mod('freak_himg_repeat') ? "repeat" : "no-repeat" ?>;
+			background-size: <?php echo esc_html(get_theme_mod('freak_himg_style','cover')); ?>;
+			background-position-x: <?php echo esc_html(get_theme_mod('freak_himg_align','center')); ?>;
+			background-repeat: <?php echo  esc_html(get_theme_mod('freak_himg_repeat')) ? "repeat" : "no-repeat" ?>;
 		}
 	</style>	
 	<?php

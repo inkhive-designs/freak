@@ -4,6 +4,8 @@ function freak_customize_register_social( $wp_customize ) {
 $wp_customize->add_section('freak_social_section', array(
     'title' => __('Social Icons','freak'),
     'priority' => 44 ,
+    'panel' => 'freak_header_panel',
+
 ));
 
 $social_networks = array( //Redefinied in Sanitization Function.

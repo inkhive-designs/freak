@@ -2,7 +2,7 @@
 // Layout and Design
 function freak_customize_register_layouts( $wp_customize ) {
     $wp_customize->add_panel( 'freak_design_panel', array(
-        'priority'       => 40,
+        'priority'       => 3,
         'capability'     => 'edit_theme_options',
         'theme_supports' => '',
         'title'          => __('Design & Layout','freak'),
@@ -32,21 +32,7 @@ function freak_customize_register_layouts( $wp_customize ) {
         )
     );
 
-    $wp_customize->add_setting(
-        'freak_disable_static_bar_mobile',
-        array( 'sanitize_callback' => 'freak_sanitize_checkbox' )
-    );
 
-    $wp_customize->add_control(
-        'freak_disable_static_bar_mobile', array(
-            'settings' => 'freak_disable_static_bar_mobile',
-            'label'    => __( 'Disable Static Menu on Mobiles.','freak' ),
-            'section'  => 'freak_static_bar_options',
-            'type'     => 'checkbox',
-            'description' => __('Desktop Static Bar Converts to a Sliding Responsive Menu on Phones','freak'),
-            'default'  => false
-        )
-    );
 
     $wp_customize->add_section(
         'freak_design_options',
