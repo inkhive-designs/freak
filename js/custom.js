@@ -12,12 +12,7 @@ jQuery(document).ready( function() {
 	        jQuery('#jumbosearch').fadeOut();
 	    }
 	});
-			
-	jQuery('#site-navigation ul.menu').slicknav({
-		label: 'Menu',
-		duration: 1000,
-		prependTo:'#slickmenu'
-	});	 
+		
 	
 	jQuery(document).scroll(function() {
 		if (jQuery(window).width() > 768 ) {
@@ -70,6 +65,15 @@ var slideout = new Slideout({
     'menu': document.getElementById('mobile-static-menu'),
     'padding': 256,
     'tolerance': 70
+});
+
+jQuery(document).ready( function() { 
+	jQuery('#top-menu ul.menu').mobileMenu({
+		switchWidth: 600
+		});
+	jQuery('#top-menu div.menu ul').mobileMenu({
+		switchWidth: 600
+		});	
 });
 
 jQuery('.mobile-toggle-button').toggle(function(){

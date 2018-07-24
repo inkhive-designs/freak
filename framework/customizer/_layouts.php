@@ -8,32 +8,7 @@ function freak_customize_register_layouts( $wp_customize ) {
         'title'          => __('Design & Layout','freak'),
     ) );
 
-    $wp_customize->add_section(
-        'freak_static_bar_options',
-        array(
-            'title'     => __('Static Bar','freak'),
-            'priority'  => 0,
-            'panel'     => 'freak_design_panel'
-        )
-    );
-
-    $wp_customize->add_setting(
-        'freak_disable_static_bar',
-        array( 'sanitize_callback' => 'freak_sanitize_checkbox' )
-    );
-
-    $wp_customize->add_control(
-        'freak_disable_static_bar', array(
-            'settings' => 'freak_disable_static_bar',
-            'label'    => __( 'Disable Static Bar.','freak' ),
-            'section'  => 'freak_static_bar_options',
-            'type'     => 'checkbox',
-            'default'  => false
-        )
-    );
-
-
-
+    
     $wp_customize->add_section(
         'freak_design_options',
         array(
@@ -45,7 +20,10 @@ function freak_customize_register_layouts( $wp_customize ) {
 
     $wp_customize->add_setting(
         'freak_blog_layout',
-        array( 'sanitize_callback' => 'freak_sanitize_blog_layout' )
+        array( 
+	        'default'			=> 'freak',
+	        'sanitize_callback' => 'freak_sanitize_blog_layout'
+        )
     );
 
     function freak_sanitize_blog_layout( $input ) {
@@ -57,7 +35,7 @@ function freak_customize_register_layouts( $wp_customize ) {
 
     $wp_customize->add_control(
         'freak_blog_layout',array(
-            'label' => __('Select Layout','freak'),
+            'label' => __('Select Layout for the Blog Page','freak'),
             'settings' => 'freak_blog_layout',
             'section'  => 'freak_design_options',
             'type' => 'select',
@@ -217,8 +195,9 @@ function freak_customize_register_layouts( $wp_customize ) {
     $wp_customize->add_setting(
         'freak_footer_text',
         array(
-            'default'		=> '',
-            'sanitize_callback'	=> 'sanitize_text_field'
+            'default'			=> '',
+            'sanitize_callback'	=> 'sanitize_text_field',
+            'transport'			=> 'postMessage'
         )
     );
 

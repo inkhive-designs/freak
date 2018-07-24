@@ -1,11 +1,15 @@
-<?php if ( get_theme_mod('freak_grid_enable') && is_home() ) :?>
+<?php if ( get_theme_mod('freak_grid_enable') && is_front_page() ) :?>
+
 <div id="flex-bg" data-stellar-background-ratio="0.5">
+	
 <div class="flex-images container">
     <?php if(get_theme_mod('freak_grid_title')): ?>
+    
 		<div class="section-title">
 			<?php echo esc_html( get_theme_mod('freak_grid_title', 'Featured Articles') ); ?>
 		</div>
-		<?php endif; ?>
+	
+	<?php endif; ?>
 	
 	<?php if ( have_posts() ) : ?>
 	

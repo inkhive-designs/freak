@@ -73,6 +73,7 @@ if (class_exists('WP_Customize_Control')) {
          * Render the control's content.
          */
         public function render_content() {
+	        	
             $dropdown = wp_dropdown_categories(
                 array(
                     'name'              => '_customize-dropdown-categories-' . $this->id,

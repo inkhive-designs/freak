@@ -65,6 +65,11 @@ function freak_custom_css_mods() {
 	endif;
 	
 	
+	if ( !display_header_text() ) :
+		echo "#masthead .site-branding #text-title-desc { display: none; }";
+	endif;
+	
+	
 	if ( get_theme_mod('freak_logo_resize') ) :
 		$val = esc_html( get_theme_mod('freak_logo_resize') )/100;
 		echo "#masthead #site-logo img { transform: scale(".$val."); -webkit-transform: scale(".$val."); -moz-transform: scale(".$val."); -ms-transform: scale(".$val."); }";
