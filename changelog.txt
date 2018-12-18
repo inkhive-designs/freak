@@ -1,6 +1,10 @@
 ChangeLog
 =========
 
+Version 1.1.1
+    i) Minor Bug Fixes
+    ii) Gutenberg Ready
+
 Version 1.1.0
     i) Improved the Customizer
     ii) Fixed Minor Bugs
